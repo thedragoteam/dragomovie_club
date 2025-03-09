@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View All TV Series - THE DRAGO TEAM</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #0a0a0a;
+      color: #ffffff;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 30px;
+      padding: 50px 0;
+    }
+    .product-card {
+      background-color: #111111;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .product-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 35px rgba(255, 8, 68, 0.2);
+    }
+    .product-image {
+      position: relative;
+      height: 350px;
+      overflow: hidden;
+    }
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .product-card:hover .product-image img {
+      transform: scale(1.05);
+    }
+    .product-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 50%);
+      display: flex;
+      align-items: flex-end;
+      padding: 20px;
+    }
+    .product-tag {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      padding: 5px 10px;
+      background: linear-gradient(45deg, #ff0844, #ffb199);
+      border-radius: 5px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .product-details {
+      padding: 20px;
+    }
+    .product-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+    .product-info {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+      font-size: 14px;
+      color: #aaa;
+    }
+    .product-price {
+      font-size: 20px;
+      font-weight: 700;
+      color: #ff0844;
+      margin-bottom: 15px;
+    }
+    .product-actions {
+      display: flex;
+      justify-content: space-between;
+    }
+    .product-rating {
+      color: #ffb199;
+    }
+    .btn {
+      padding: 12px 24px;
+      background: linear-gradient(45deg, #ff0844, #ffb199);
+      border: none;
+      border-radius: 30px;
+      color: white;
+      font-weight: 600;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(255, 8, 68, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="product-grid">
+      <!-- TV Series 1 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="hod.jpg" alt="House of the Dragon">
+          <div class="product-overlay"></div>
+          <div class="product-tag">Complete Series</div>
+        </div>
+        <div class="product-details">
+          <h3 class="product-title">House of the Dragon</h3>
+          <div class="product-info">
+            <span>2022 • Fantasy/Drama</span>
+            <span>10 Episodes</span>
+          </div>
+          <div class="product-price">LKR 200.00</div>
+          <div class="product-actions">
+            <a href="https://wa.me/94705272056?text=I%20want%20to%20buy%20House Of Dragon%20for%20LKR%20200.00" 
+               class="btn" 
+               target="_blank">
+               Buy Now
+            </a>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- TV Series 2 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="tlou.jpg" alt="The Last of Us">
+          <div class="product-overlay"></div>
+          <div class="product-tag">Complete Season</div>
+        </div>
+        <div class="product-details">
+          <h3 class="product-title">The Last of Us</h3>
+          <div class="product-info">
+            <span>2023 • Drama/Horror</span>
+            <span>9 Episodes</span>
+          </div>
+          <div class="product-price">LKR 100.00</div>
+          <div class="product-actions">
+            <a href="https://wa.me/94705272056?text=I%20want%20to%20buy%20The Last Of Us%20for%20LKR%20100.00" 
+               class="btn" 
+               target="_blank">
+               Buy Now
+            </a>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- TV Series 3 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="st.jpg" alt="Stranger Things">
+          <div class="product-overlay"></div>
+          <div class="product-tag">Complete Series</div>
+        </div>
+        <div class="product-details">
+          <h3 class="product-title">Stranger Things</h3>
+          <div class="product-info">
+            <span>2016-2022 • Sci-Fi/Horror</span>
+            <span>4 Seasons</span>
+          </div>
+          <div class="product-price">LKR 400.00</div>
+          <div class="product-actions">
+            <a href="https://wa.me/94705272056?text=I%20want%20to%20buy%20Stranger Things%20for%20LKR%20400.00" 
+               class="btn" 
+               target="_blank">
+               Buy Now
+            </a>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- TV Series 4 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="bb.jpg" alt="Breaking Bad">
+          <div class="product-overlay"></div>
+          <div class="product-tag">Complete Series</div>
+        </div>
+        <div class="product-details">
+          <h3 class="product-title">Breaking Bad</h3>
+          <div class="product-info">
+            <span>2008-2013 • Crime/Drama</span>
+            <span>5 Seasons</span>
+          </div>
+          <div class="product-price">LKR 500.00</div>
+          <div class="product-actions">
+            <a href="https://wa.me/94705272056?text=I%20want%20to%20buy%20Breaking Bad%20for%20LKR%20500.00" 
+               class="btn" 
+               target="_blank">
+               Buy Now
+            </a>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- TV Series 5 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="got.jpg" alt="Game of Thrones">
+          <div class="product-overlay"></div>
+          <div class="product-tag">Complete Series</div>
+        </div>
+        <div class="product-details">
+          <h3 class="product-title">Game of Thrones</h3>
+          <div class="product-info">
+            <span>2011-2019 • Fantasy/Drama</span>
+            <span>8 Seasons</span>
+          </div>
+          <div class="product-price">LKR 600.00</div>
+          <div class="product-actions">
+            <a href="https://wa.me/94705272056?text=I%20want%20to%20buy%20Game of Thrones%20for%20LKR%20600.00" 
+               class="btn" 
+               target="_blank">
+               Buy Now
+            </a>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- TV Series 6 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="mrq.jpg" alt="Mr. Queen">
+          <div class="product-overlay"></div>
+          <div class="product-tag">Complete Series</div>
+        </div>
+        <div class="product-details">
+          <h3 class="product-title">Mr. Queen</h3>
+          <div class="product-info">
+            <span>2020-2020 • Comedy</span>
+            <span>1 Seasons</span>
+          </div>
+          <div class="product-price">LKR 150.00</div>
+          <div class="product-actions">
+            <a href="https://wa.me/94705272056?text=I%20want%20to%20buy%20Mr. Queen%20for%20LKR%20150.00" 
+               class="btn" 
+               target="_blank">
+               Buy Now
+            </a>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- TV Series 7 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="shogun.jpg" alt="Shogun">
+          <div class="product-overlay"></div>
+          <div class="product-tag">Complete Series</div>
+        </div>
+        <div class="product-details">
+          <h3 class="product-title">Shogun</h3>
+          <div class="product-info">
+            <span>2024- • Action/Adventure</span>
+            <span>1</span>
+          </div>
+          <div class="product-price">LKR 100.00</div>
+          <div class="product-actions">
+            <a href="https://wa.me/94705272056?text=I%20want%20to%20buy%20Shogun%20for%20LKR%20100.00" 
+               class="btn" 
+               target="_blank">
+               Buy Now
+            </a>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- TV Series 8 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="sherlock.jpg" alt="Sherlock">
+          <div class="product-overlay"></div>
+          <div class="product-tag">Season 01</div>
+        </div>
+        <div class="product-details">
+          <h3 class="product-title">Sherlock</h3>
+          <div class="product-info">
+            <span>2010-2017 • Crime/Drama</span>
+            <span>4 Seasons</span>
+          </div>
+          <div class="product-price">LKR 400.00</div>
+          <div class="product-actions">
+            <a href="https://wa.me/94705272056?text=I%20want%20to%20buy%20Sherlock%20for%20LKR%20400.00" 
+               class="btn" 
+               target="_blank">
+               Buy Now
+            </a>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- TV Series 9 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="narcos.jpg" alt="Narcos">
+          <div class="product-overlay"></div>
+          <div class="product-tag">Complete Series</div>
+        </div>
+        <div class="product-details">
+          <h3 class="product-title">Narcos</h3>
+          <div class="product-info">
+            <span>2015-2017 • Crime/Drama</span>
+            <span>3 Seasons</span>
+          </div>
+          <div class="product-price">LKR 300.00</div>
+          <div class="product-actions">
+            <a href="https://wa.me/94705272056?text=I%20want%20to%20buy%20Narcos%20for%20LKR%20300.00" 
+               class="btn" 
+               target="_blank">
+               Buy Now
+            </a>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- TV Series 10 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="dark.jpg" alt="Dark">
+          <div class="product-overlay"></div>
+          <div class="product-tag">Complete Series</div>
+        </div>
+        <div class="product-details">
+          <h3 class="product-title">Dark</h3>
+          <div class="product-info">
+            <span>2017-2020 • Sci-Fi/Thriller</span>
+            <span>3 Seasons</span>
+          </div>
+          <div class="product-price">LKR 300.00</div>
+          <div class="product-actions">
+            <a href="https://wa.me/94705272056?text=I%20want%20to%20buy%20Dark%20for%20LKR%20300.00" 
+               class="btn" 
+               target="_blank">
+               Buy Now
+            </a>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- TV Series 11 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="farzi.jpg" alt="Farzi">
+          <div class="product-overlay"></div>
+          <div class="product-tag">Season 01</div>
+        </div>
+        <div class="product-details">
+          <h3 class="product-title">Farzi</h3>
+          <div class="product-info">
+            <span>2023- • Crime</span>
+            <span>1 Seasons</span>
+          </div>
+          <div class="product-price">LKR 100.00</div>
+          <div class="product-actions">
+            <a href="https://wa.me/94705272056?text=I%20want%20to%20buy%20Farzi%20for%20LKR%20100.00" 
+               class="btn" 
+               target="_blank">
+               Buy Now
+            </a>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- TV Series 12 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="tlor.jpg" alt="The Lord of the Rings: The Rings of Power">
+          <div class="product-overlay"></div>
+          <div class="product-tag">Complete Series</div>
+        </div>
+        <div class="product-details">
+          <h3 class="product-title">The Lord of the Rings: The Rings of Power</h3>
+          <div class="product-info">
+            <span>2022- • Action/Fantacy</span>
+            <span>2 Seasons</span>
+          </div>
+          <div class="product-price">LKR 200.00</div>
+          <div class="product-actions">
+            <a href="https://wa.me/94705272056?text=I%20want%20to%20buy%20The Lord of the Rings: The Rings of Power%20for%20LKR%20200.00" 
+               class="btn" 
+               target="_blank">
+               Buy Now
+            </a>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- TV Series 13 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="bcs.jpg" alt="Better Call Saul">
+          <div class="product-overlay"></div>
+          <div class="product-tag">Complete Series</div>
+        </div>
+        <div class="product-details">
+          <h3 class="product-title">Better Call Saul</h3>
+          <div class="product-info">
+            <span>2015-2022 • Crime/Drama</span>
+            <span>6 Seasons</span>
+          </div>
+          <div class="product-price">LKR 600.00</div>
+          <div class="product-actions">
+            <a href="https://wa.me/94705272056?text=I%20want%20to%20buy%20Better Call Saul%20for%20LKR%20600.00" 
+               class="btn" 
+               target="_blank">
+               Buy Now
+            </a>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- TV Series 14 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="lucifer.jpg" alt="Lucifer">
+          <div class="product-overlay"></div>
+          <div class="product-tag">Complete Series</div>
+        </div>
+        <div class="product-details">
+          <h3 class="product-title">Lucifer</h3>
+          <div class="product-info">
+            <span>2016-2021 • Crime/Fantasy</span>
+            <span>6 Seasons</span>
+          </div>
+          <div class="product-price">LKR 600.00</div>
+          <div class="product-actions">
+            <a href="https://wa.me/94705272056?text=I%20want%20to%20buy%20Lucifer%20for%20LKR%20600.00" 
+               class="btn" 
+               target="_blank">
+               Buy Now
+            </a>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- TV Series 15 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="vikings.jpg" alt="Vikings">
+          <div class="product-overlay"></div>
+          <div class="product-tag">Complete Series</div>
+        </div>
+        <div class="product-details">
+          <h3 class="product-title">Vikings</h3>
+          <div class="product-info">
+            <span>2013-2020 • Action/Drama</span>
+            <span>6 Seasons</span>
+          </div>
+          <div class="product-price">LKR 600.00</div>
+          <div class="product-actions">
+            <a href="https://wa.me/94705272056?text=I%20want%20to%20buy%20Vikings%20for%20LKR%20600.00" 
+               class="btn" 
+               target="_blank">
+               Buy Now
+            </a>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- TV Series 16 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="moneyheist.jpg" alt="Money Heist">
+          <div class="product-overlay"></div>
+          <div class="product-tag">Complete Series</div>
+        </div>
+        <div class="product-details">
+          <h3 class="product-title">Money Heist</h3>
+          <div class="product-info">
+            <span>2017-2021 • Crime/Drama</span>
+            <span>5 Seasons</span>
+          </div>
+          <div class="product-price">LKR 500.00</div>
+          <div class="product-actions">
+            <a href="https://wa.me/94705272056?text=I%20want%20to%20buy%20Money Heist%20for%20LKR%20500.00" 
+               class="btn" 
+               target="_blank">
+               Buy Now
+            </a>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

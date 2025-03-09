@@ -1,0 +1,392 @@
+
+<div id="cyberpunkCtn">
+  <div class="scanline"></div>
+  <div class="noise"></div>
+  
+  <div class="content">
+    <div class="glitch-wrapper">
+      <h1 class="cyberpunk-title" data-text="COMING_SOON">COMING_SOON</h1>
+    </div>
+    
+    <div class="subtitle">GAME SECTION INITIALIZATION</div>
+    
+    <div class="terminal">
+      <div class="code-line">&gt; ESTABLISHING CONNECTION...</div>
+      <div class="code-line">&gt; PREPARING DIGITAL ENVIRONMENT...</div>
+      <div class="code-line">&gt; COMPILING GAME ASSETS...</div>
+      <div class="code-line blink">&gt; _</div>
+    </div>
+    
+    <div class="loading-bar-container">
+      <div class="loading-bar"></div>
+      <div class="loading-percentage">0%</div>
+    </div>
+    
+    <div class="cyberpunk-message">
+      <p>STATUS: <span class="status">DEVELOPMENT IN PROGRESS</span></p>
+      <p class="blink-slow">RETURN LATER FOR ACCESS...</p>
+    </div>
+    
+    <div class="team-name">THE DRAGO TEAM</div>
+  </div>
+  
+  <div class="grid-overlay"></div>
+  <div class="corner top-left"></div>
+  <div class="corner top-right"></div>
+  <div class="corner bottom-left"></div>
+  <div class="corner bottom-right"></div>
+</div>
+
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #0ff;
+    font-family: 'Courier New', monospace;
+    overflow: hidden;
+    text-align: center;
+    height: 100vh;
+  }
+  
+  #cyberpunkCtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background: linear-gradient(135deg, #000000 0%, #0a0a20 100%);
+  }
+  
+  .content {
+    z-index: 10;
+    padding: 20px;
+    max-width: 800px;
+    width: 90%;
+  }
+  
+  .cyberpunk-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #0ff;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin: 0 0 20px 0;
+    position: relative;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.8), 0 0 10px rgba(0, 255, 255, 0.5);
+    animation: flicker 4s infinite alternate;
+  }
+  
+  .cyberpunk-title::before,
+  .cyberpunk-title::after {
+    content: attr(data-text);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+  }
+  
+  .cyberpunk-title::before {
+    color: #f0f;
+    z-index: -1;
+    animation: glitch-effect 3s infinite alternate;
+  }
+  
+  .cyberpunk-title::after {
+    color: #0ff;
+    z-index: -2;
+    animation: glitch-effect 2s infinite alternate-reverse;
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+    color: #f0f;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+    text-shadow: 0 0 5px rgba(255, 0, 255, 0.5);
+  }
+  
+  .terminal {
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 1px solid #0ff;
+    padding: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+    height: 120px;
+    overflow: hidden;
+  }
+  
+  .code-line {
+    font-family: monospace;
+    font-size: 0.9rem;
+    margin: 5px 0;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+    color: #00cc99;
+  }
+  
+  .code-line:nth-child(1) { animation-delay: 0.5s; }
+  .code-line:nth-child(2) { animation-delay: 2s; }
+  .code-line:nth-child(3) { animation-delay: 3.5s; }
+  .code-line:nth-child(4) { 
+    animation-delay: 5s; 
+    color: #0ff;
+  }
+  
+  .loading-bar-container {
+    width: 100%;
+    height: 6px;
+    background-color: rgba(0, 255, 255, 0.1);
+    margin: 30px auto;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #0ff;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  }
+  
+  .loading-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #f0f, #0ff);
+    background-size: 200% 100%;
+    position: relative;
+  }
+  
+  .loading-percentage {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    font-size: 0.8rem;
+    color: #0ff;
+  }
+  
+  .cyberpunk-message {
+    font-size: 1rem;
+    letter-spacing: 2px;
+    margin-top: 30px;
+  }
+  
+  .cyberpunk-message p {
+    margin: 5px 0;
+  }
+  
+  .team-name {
+    font-size: 1.3rem;
+    color: #ff9900;
+    letter-spacing: 5px;
+    margin-top: 30px;
+    font-weight: bold;
+    text-shadow: 0 0 8px rgba(255, 153, 0, 0.7), 0 0 12px rgba(255, 153, 0, 0.4);
+    border: 1px solid #ff9900;
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: team-glow 3s infinite alternate;
+  }
+  
+  .status {
+    color: #ff9900;
+    font-weight: bold;
+  }
+  
+  .blink {
+    animation: blink 1s infinite;
+  }
+  
+  .blink-slow {
+    animation: blink 2s infinite;
+  }
+  
+  .scanline {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(
+      to bottom,
+      transparent 50%,
+      rgba(0, 255, 255, 0.02) 51%,
+      transparent 51%
+    );
+    background-size: 100% 4px;
+    z-index: 20;
+    pointer-events: none;
+    animation: scanline 8s linear infinite;
+  }
+  
+  .noise {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.05;
+    z-index: 15;
+    pointer-events: none;
+  }
+  
+  .grid-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+      linear-gradient(rgba(0, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 20px 20px;
+    z-index: 5;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    animation: grid-animation 20s linear infinite;
+  }
+  
+  .corner {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    z-index: 15;
+  }
+  
+  .top-left {
+    top: 20px;
+    left: 20px;
+    border-top: 2px solid #0ff;
+    border-left: 2px solid #0ff;
+  }
+  
+  .top-right {
+    top: 20px;
+    right: 20px;
+    border-top: 2px solid #0ff;
+    border-right: 2px solid #0ff;
+  }
+  
+  .bottom-left {
+    bottom: 20px;
+    left: 20px;
+    border-bottom: 2px solid #0ff;
+    border-left: 2px solid #0ff;
+  }
+  
+  .bottom-right {
+    bottom: 20px;
+    right: 20px;
+    border-bottom: 2px solid #0ff;
+    border-right: 2px solid #0ff;
+  }
+  
+  @keyframes flicker {
+    0%, 100% { opacity: 1; }
+    8%, 9% { opacity: 0.8; }
+    10%, 12% { opacity: 0.9; }
+    20%, 25% { opacity: 0.7; }
+    30%, 35% { opacity: 0.9; }
+    40%, 45% { opacity: 0.8; }
+    55%, 70% { opacity: 1; }
+  }
+  
+  @keyframes glitch-effect {
+    0% { transform: translate(0); }
+    20% { transform: translate(-3px, 1px); }
+    40% { transform: translate(3px, -1px); }
+    60% { transform: translate(-5px, 2px); }
+    80% { transform: translate(5px, -2px); }
+    100% { transform: translate(0); }
+  }
+  
+  @keyframes blink {
+    0%, 49% { opacity: 1; }
+    50%, 100% { opacity: 0; }
+  }
+  
+  @keyframes scanline {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(100vh); }
+  }
+  
+  @keyframes grid-animation {
+    0% { background-position: 0 0; }
+    100% { background-position: 40px 40px; }
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes team-glow {
+    0%, 100% { box-shadow: 0 0 10px rgba(255, 153, 0, 0.7); }
+    50% { box-shadow: 0 0 20px rgba(255, 153, 0, 0.9), 0 0 30px rgba(255, 153, 0, 0.5); }
+  }
+</style>
+
+<script>
+  // Add some random glitch effects on the page
+  function randomGlitch() {
+    const title = document.querySelector('.cyberpunk-title');
+    
+    if (Math.random() < 0.1) {
+      title.style.transform = `translate(${Math.random() * 10 - 5}px, ${Math.random() * 10 - 5}px)`;
+      
+      setTimeout(() => {
+        title.style.transform = 'translate(0, 0)';
+      }, 100);
+    }
+    
+    // Rarely cause a more severe glitch
+    if (Math.random() < 0.03) {
+      document.body.style.filter = 'hue-rotate(90deg) saturate(200%)';
+      
+      setTimeout(() => {
+        document.body.style.filter = '';
+      }, 150);
+    }
+  }
+  
+  // Animate the loading bar and percentage
+  function animateLoading() {
+    const loadingBar = document.querySelector('.loading-bar');
+    const percentage = document.querySelector('.loading-percentage');
+    const status = document.querySelector('.status');
+    let width = 0;
+    
+    const increment = () => {
+      if (width >= 100) {
+        percentage.textContent = '100%';
+        
+        // Reset after 2 seconds
+        setTimeout(() => {
+          width = 0;
+          loadingBar.style.width = '0%';
+          percentage.textContent = '0%';
+          setTimeout(increment, 1000);
+        }, 2000);
+      } else {
+        width += Math.random() * 1.5;
+        if (width > 100) width = 100;
+        loadingBar.style.width = width + '%';
+        percentage.textContent = Math.floor(width) + '%';
+        
+        setTimeout(increment, 100 + Math.random() * 200);
+      }
+    };
+    
+    increment();
+  }
+  
+  // Initialize glitch effect
+  setInterval(randomGlitch, 2000);
+  
+  // Start animations when page loads
+  window.addEventListener('load', function() {
+    animateLoading();
+  });
+</script>

@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View All Movies - THE DRAGO TEAM</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #0a0a0a;
+      color: #ffffff;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 30px;
+      padding: 50px 0;
+    }
+    .product-card {
+      background-color: #111111;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .product-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 35px rgba(255, 8, 68, 0.2);
+    }
+    .product-image {
+      position: relative;
+      height: 350px;
+      overflow: hidden;
+    }
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .product-card:hover .product-image img {
+      transform: scale(1.05);
+    }
+    .product-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 50%);
+      display: flex;
+      align-items: flex-end;
+      padding: 20px;
+    }
+    .product-tag {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      padding: 5px 10px;
+      background: linear-gradient(45deg, #ff0844, #ffb199);
+      border-radius: 5px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .product-details {
+      padding: 20px;
+    }
+    .product-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+    .product-info {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+      font-size: 14px;
+      color: #aaa;
+    }
+    .product-price {
+      font-size: 20px;
+      font-weight: 700;
+      color: #ff0844;
+      margin-bottom: 15px;
+    }
+    .product-actions {
+      display: flex;
+      justify-content: space-between;
+    }
+    .product-rating {
+      color: #ffb199;
+    }
+    .btn {
+      padding: 12px 24px;
+      background: linear-gradient(45deg, #ff0844, #ffb199);
+      border: none;
+      border-radius: 30px;
+      color: white;
+      font-weight: 600;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(255, 8, 68, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="product-grid">
+      <!-- Product 1 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="venom2024.jpg" alt="Venom: The Last Dance">
+          <div class="product-overlay"></div>
+          <div class="product-tag">Award Winner</div>
+        </div>
+        <div class="product-details">
+          <h3 class="product-title">Venom: The Last Dance</h3>
+          <div class="product-info">
+            <span>2022 • Sci-Fi/Adventure</span>
+            <span>1h 50m</span>
+          </div>
+          <div class="product-price">LKR 100.00</div>
+          <div class="product-actions">
+            <a href="https://wa.me/94705272056?text=I%20want%20to%20buy%20Venom: The Last Dance%20for%20LKR%20100.00" 
+               class="btn" 
+               target="_blank">
+               Buy Now
+            </a>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Repeat the above block 19 more times with different movie details -->
+      <!-- Product 2 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="dune 2.jpg" alt="Dune: Part Two">
+          <div class="product-overlay"></div>
+          <div class="product-tag">New Release</div>
+        </div>
+        <div class="product-details">
+          <h3 class="product-title">Dune: Part Two</h3>
+          <div class="product-info">
+            <span>2024 • Action/Sci-Fi</span>
+            <span>166 min</span>
+          </div>
+          <div class="product-price">LKR 100.00</div>
+          <div class="product-actions">
+            <a href="https://wa.me/94705272056?text=I%20want%20to%20buy%20Dune: Part Two%20for%20LKR%20100.00" 
+               class="btn" 
+               target="_blank">
+               Buy Now
+            </a>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Product 3 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="op.jpg" alt="Oppenheimer">
+          <div class="product-overlay"></div>
+          <div class="product-tag">Trending</div>
+        </div>
+        <div class="product-details">
+          <h3 class="product-title">Oppenheimer</h3>
+          <div class="product-info">
+            <span>2023 • Biography/Drama</span>
+            <span>180 min</span>
+          </div>
+          <div class="product-price">LKR 100.00</div>
+          <div class="product-actions">
+            <a href="https://wa.me/94705272056?text=I%20want%20to%20buy%20Oppenheimer%20for%20LKR%20100.00" 
+               class="btn" 
+               target="_blank">
+               Buy Now
+            </a>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Product 4 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="bm.jpg" alt="The Batman">
+          <div class="product-overlay"></div>
+        </div>
+        <div class="product-details">
+          <h3 class="product-title">The Batman</h3>
+          <div class="product-info">
+            <span>2022 • Action/Crime</span>
+            <span>176 min</span>
+          </div>
+          <div class="product-price">LKR 100.00</div>
+          <div class="product-actions">
+            <a href="https://wa.me/94705272056?text=I%20want%20to%20buy%20The Batman%20for%20LKR%20100.00" 
+               class="btn" 
+               target="_blank">
+               Buy Now
+            </a>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Product 5 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="ev.jpg" alt="Everything Everywhere All at Once">
+          <div class="product-overlay"></div>
+          <div class="product-tag">Award Winner</div>
+        </div>
+        <div class="product-details">
+          <h3 class="product-title">Everything Everywhere All at Once</h3>
+          <div class="product-info">
+            <span>2022 • Sci-Fi/Adventure</span>
+            <span>139 min</span>
+          </div>
+          <div class="product-price">LKR 100.00</div>
+          <div class="product-actions">
+            <a href="https://wa.me/94705272056?text=I%20want%20to%20buy%20Everything Everywhere All at Once%20for%20LKR%20100.00" 
+               class="btn" 
+               target="_blank">
+               Buy Now
+            </a>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Product 6 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="wild robot.jpg" alt="The Wild Robot">
+          <div class="product-overlay"></div>
+          <div class="product-tag">New</div>
+        </div>
+        <div class="product-details">
+          <h3 class="product-title">The Wild Robot</h3>
+          <div class="product-info">
+            <span>2024 • Animation/Sci-Fi</span>
+            <span>1h 42m</span>
+          </div>
+          <div class="product-price">LKR 100.00</div>
+          <div class="product-actions">
+            <a href="https://wa.me/94705272056?text=I%20want%20to%20buy%20The Wild Robot%20for%20LKR%20100.00" 
+               class="btn" 
+               target="_blank">
+               Buy Now
+            </a>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Product 7 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="the watchers.jpg" alt="The Watchers">
+          <div class="product-overlay"></div>
+          <div class="product-tag">Popular</div>
+        </div>
+        <div class="product-details">
+          <h3 class="product-title">The Watchers</h3>
+          <div class="product-info">
+            <span>2024 • Horror/Fantacy</span>
+            <span>1h 42m</span>
+          </div>
+          <div class="product-price">LKR 100.00</div>
+          <div class="product-actions">
+            <a href="https://wa.me/94705272056?text=I%20want%20to%20buy%20The Watchers%20for%20LKR%20100.00" 
+               class="btn" 
+               target="_blank">
+               Buy Now
+            </a>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Product 8 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="Tarot.jpg" alt="Tarot">
+          <div class="product-overlay"></div>
+          <div class="product-tag">Trending</div>
+        </div>
+        <div class="product-details">
+          <h3 class="product-title">Tarot</h3>
+          <div class="product-info">
+            <span>2021 • Horror/superntural</span>
+            <span>1h32m</span>
+          </div>
+          <div class="product-price">LKR 100.00</div>
+          <div class="product-actions">
+            <a href="https://wa.me/94705272056?text=I%20want%20to%20buy%20Tarot%20for%20LKR%20100.00" 
+               class="btn" 
+               target="_blank">
+               Buy Now
+            </a>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Product 9 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="pushpa 2.jpg" alt="Pushpa 2: The Rule">
+          <div class="product-overlay"></div>
+          <div class="product-tag">Popular</div>
+        </div>
+        <div class="product-details">
+          <h3 class="product-title">Pushpa 2: The Rule</h3>
+          <div class="product-info">
+            <span>2024 • Action/Thriller</span>
+            <span>3h 40m</span>
+          </div>
+          <div class="product-price">LKR 100.00</div>
+          <div class="product-actions">
+            <a href="https://wa.me/94705272056?text=I%20want%20to%20buy%20Pushpa 2: The Rule%20for%20LKR%20100.00" 
+               class="btn" 
+               target="_blank">
+               Buy Now
+            </a>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Product 10 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="godzilla.jpg" alt="Godzilla x Kong: The New Empire">
+          <div class="product-overlay"></div>
+          <div class="product-tag">New</div>
+        </div>
+        <div class="product-details">
+          <h3 class="product-title">Godzilla x Kong: The New Empire</h3>
+          <div class="product-info">
+            <span>2024 • Action/Sci-Fi</span>
+            <span>1h 55m</span>
+          </div>
+          <div class="product-price">LKR 100.00</div>
+          <div class="product-actions">
+            <a href="https://wa.me/94705272056?text=I%20want%20to%20buy%20Godzilla x Kong: The New Empire%20for%20LKR%20100.00" 
+               class="btn" 
+               target="_blank">
+               Buy Now
+            </a>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Product 11 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="planet apes.jpg" alt="Kingdom of the Planet of the Apes">
+          <div class="product-overlay"></div>
+          <div class="product-tag">Popular</div>
+        </div>
+        <div class="product-details">
+          <h3 class="product-title">Kingdom of the Planet of the Apes</h3>
+          <div class="product-info">
+            <span>2024 • Action/Sci-Fi</span>
+            <span>2h 25m</span>
+          </div>
+          <div class="product-price">LKR 100.00</div>
+          <div class="product-actions">
+            <a href="https://wa.me/94705272056?text=I%20want%20to%20buy%20Kingdom of the Planet of the Apes%20for%20LKR%20100.00" 
+               class="btn" 
+               target="_blank">
+               Buy Now
+            </a>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Product 12 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="The Family Star.jpg" alt="The Family Star">
+          <div class="product-overlay"></div>
+          <div class="product-tag">Trending</div>
+        </div>
+        <div class="product-details">
+          <h3 class="product-title">The Family Star</h3>
+          <div class="product-info">
+            <span>2024 • Drama/Romance</span>
+            <span>2h 37m</span>
+          </div>
+          <div class="product-price">LKR 100.00</div>
+          <div class="product-actions">
+            <a href="https://wa.me/94705272056?text=I%20want%20to%20buy%20The Family Star%20for%20LKR%20100.00" 
+               class="btn" 
+               target="_blank">
+               Buy Now
+            </a>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Product 13 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="Romulus.jpg" alt="Alien: Romulus">
+          <div class="product-overlay"></div>
+          <div class="product-tag">Alien</div>
+        </div>
+        <div class="product-details">
+          <h3 class="product-title">Alien: Romulus</h3>
+          <div class="product-info">
+            <span>2024 • Horror/Sci-Fi</span>
+            <span>1h 59m</span>
+          </div>
+          <div class="product-price">LKR 100.00</div>
+          <div class="product-actions">
+            <a href="https://wa.me/94705272056?text=I%20want%20to%20buy%20Alien: Romulus%20for%20LKR%20100.00" 
+               class="btn" 
+               target="_blank">
+               Buy Now
+            </a>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Product 14 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="Hunter.jpg" alt="Kraven the Hunter">
+          <div class="product-overlay"></div>
+          <div class="product-tag">New</div>
+        </div>
+        <div class="product-details">
+          <h3 class="product-title">Kraven the Hunter</h3>
+          <div class="product-info">
+            <span>2024 • Action/Sci-Fi</span>
+            <span>2h 7m</span>
+          </div>
+          <div class="product-price">LKR 100.00</div>
+          <div class="product-actions">
+            <a href="https://wa.me/94705272056?text=I%20want%20to%20buy%20Kraven the Hunter%20for%20LKR%20100.00" 
+               class="btn" 
+               target="_blank">
+               Buy Now
+            </a>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Product 15 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="Deadpool & Wolverine.jpg" alt="Deadpool & Wolverine">
+          <div class="product-overlay"></div>
+          <div class="product-tag">Popular</div>
+        </div>
+        <div class="product-details">
+          <h3 class="product-title">Deadpool & Wolverine</h3>
+          <div class="product-info">
+            <span>2024 • Action/Comedy</span>
+            <span>2h 8m</span>
+          </div>
+          <div class="product-price">LKR 100.00</div>
+          <div class="product-actions">
+            <a href="https://wa.me/94705272056?text=I%20want%20to%20buy%20Deadpool & Wolverine%20for%20LKR%20100.00" 
+               class="btn" 
+               target="_blank">
+               Buy Now
+            </a>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Product 16 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="avatar 2.jpg" alt="Avatar: The Way of Water">
+          <div class="product-overlay"></div>
+          <div class="product-tag">Popular</div>
+        </div>
+        <div class="product-details">
+          <h3 class="product-title">Avatar: The Way of Water</h3>
+          <div class="product-info">
+            <span>2022 • Action/Adventure</span>
+            <span>3h 12m</span>
+          </div>
+          <div class="product-price">LKR 100.00</div>
+          <div class="product-actions">
+            <a href="https://wa.me/94705272056?text=I%20want%20to%20buy%20Avatar: The Way of Water%20for%20LKR%20100.00" 
+               class="btn" 
+               target="_blank">
+               Watch Now
+            </a>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+</body>
+</html>
